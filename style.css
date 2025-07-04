@@ -61,14 +61,59 @@ body {
 	color: #555;
 	box-shadow: inset 0 0 0 3px white;
 }
+.h-primary,
+.heading--secondary,
+.heading-ternary {
+	font-weight: 700;
+	color: #333;
+	letter-spacing: -0.5px;
+}
 
 .h-primary {
 	font-size: 5.2rem;
-	font-weight: 700;
 	line-height: 1.05;
-	color: #333;
-	letter-spacing: -0.5px;
 	margin-bottom: 3.2rem;
+}
+.heading--secondary {
+	font-size: 4.4rem;
+	line-height: 1.2;
+	margin-bottom: 9.6rem;
+}
+
+.heading-ternary {
+	font-size: 3rem;
+	line-height: 1.2;
+	margin-bottom: 3.2rem;
+}
+
+.subheading {
+	display: block;
+	font-size: 1.6rem;
+	font-weight: 500;
+	letter-spacing: 0.75px;
+	color: var(--dark-brand-color);
+	text-transform: uppercase;
+	margin-bottom: 1.6rem;
+}
+
+.grid {
+	display: grid;
+	column-gap: 6.4rem;
+	row-gap: 9.6rem;
+}
+
+.grid--2col {
+	grid-template-columns: repeat(2, 1fr);
+}
+
+.grid--3col {
+	grid-template-columns: repeat(3, 1fr);
+}
+
+.container {
+	max-width: 130rem;
+	padding: 0 3.2rem;
+	margin: 0 auto;
 }
 
 /* HEADER */
@@ -119,10 +164,9 @@ body {
 
 .main-nav-link.nav-cta:hover,
 .main-nav-link.nav-cta:active {
-	background-color: var(--dark-brand-color)
+	background-color: var(--dark-brand-color);
 }
 /* HERO */
-
 
 .section-hero {
 	background-color: var(--tint);
@@ -130,11 +174,6 @@ body {
 }
 .hero {
 	max-width: 130rem;
-	margin: 0 auto;
-	padding: 0 3.2rem;
-	display: grid;
-	grid-template-columns: 1fr 1fr;
-	gap: 9.6rem;
 	align-items: center;
 }
 
@@ -180,4 +219,64 @@ body {
 .delivered-text span {
 	color: var(--dark-brand-color);
 	font-weight: 700;
+}
+
+/* HOW */
+
+.section-works {
+	padding: 9.6rem 0;
+}
+
+.step-img {
+	width: 35%;
+}
+
+.step-number {
+	font-size: 8.6rem;
+	font-weight: 600;
+	color: #ddd;
+	margin-bottom: 1.2rem;
+}
+
+.step-img-box {
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.step-img-box::before,
+.step-img-box::after {
+	content: '';
+	display: block;;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 50%;
+	transform: translate(-50%, -50%);
+	z-index: -1;
+}
+
+.step-img-box::before {
+	width: 60%;
+	/* height: 60%; */
+	padding-bottom: 60%;
+	background-color: var(--tint);
+	z-index: -1;
+}
+
+.step-img-box::after {
+	width: 45%;
+	padding-bottom: 45%;
+	background-color: #fae5d3;
+	z-index: -1;
+}
+
+.step-description {
+	font-size: 1.8rem;
+	line-height: 1.8;
+}
+
+.step-text-box {
+	align-self: center;
 }
